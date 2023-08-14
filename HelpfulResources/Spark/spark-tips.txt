@@ -1,0 +1,23 @@
+https://spark.apache.org/
+
+
+
+TROUBLE-SHOOTING SPARK
+
+results = whatever.collect()
+results.toDebugString()
+
+help(pyspark)
+
+async 10.9
+
+
+Exception: Python in worker has different version 2.7 than that in driver 2.6, PySpark cannot run with different minor versions.
+https://stackoverflow.com/questions/30518362/how-do-i-set-the-drivers-python-version-in-spark
+
+PYSPARK_PYTHON=/usr/bin/python2.6 
+PYSPARK_DRIVER_PYTHON=/usr/bin/python2.6
+
+
+CUSTOM PARTITIONING
+http://sparkdatasourceapi.blogspot.com/2016/10/patitioning-in-spark-writing-custom.html

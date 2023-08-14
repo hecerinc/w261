@@ -1,0 +1,198 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+
+.toc-item {
+  margin: 0!important;
+  margin-top: 36px!important;
+  list-style: none;
+}
+.toc-item li {
+  color: #b0dbd9;
+  margin: 5px 0 5px 10px;
+  text-shadow: 0 1px 0 white;
+  list-style: none;
+}
+.toc-item li:before {
+  content: '\25ca';
+  display: inline-block;
+  color: #242433;
+  padding: 2px;
+  border-radius: .5px;
+  float: left;
+  clear: left;
+  margin-left: -10px;
+  margin-top: -3px;
+  padding: 2px 10px 0 0;
+}
+/* jupyter auto add name attributes to H* tags 
+ * we will use classNames to simulate title tags */ 
+.toc-heading {
+  font-size: 18px;
+}
+
+main {
+  min-width: 320px;
+  /*max-width: 800px;
+  padding: 50px;*/
+  margin: 0 auto;
+  background: #fff;
+}
+a, a:hover, a:link, a:visited{
+  color:#0b349b;
+}
+
+h2 a, h3 a, h4 a,
+h2 a:hover,   h3 a:hover,   h4 a:hover,
+h2 a:link,    h3 a:link,    h4 a:link,
+h2 a:visited, h3 a:visited, h4 a:visited {
+  color:#031355;
+}
+pre{
+    background-color:transparent;
+}
+.color-start{
+  background-color: #bdd971;
+}
+.color-middle{
+  background-color: #ffe474;
+}
+.color-end{
+  background-color: #abe1f5;
+}
+.code{
+    font-family:courier;
+}
+ul.toc-item > li{
+  list-style: none;
+}
+section.tab {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input.tab-state {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #787878;;
+  border: 1px solid transparent;
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #010b35;
+  border: 1px solid #ddd;
+  border-top:3px solid #f93933;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6,
+#tab7:checked ~ #content7,
+#tab8:checked ~ #content8,
+#tab9:checked ~ #content9,
+#tab10:checked ~ #content10,
+#tab11:checked ~ #content11,
+#tab12:checked ~ #content12,
+#tab13:checked ~ #content13,
+#tab_protocol_1:checked ~ #content_protocol_1, 
+#tab_protocol_2:checked ~ #content_protocol_2, 
+#tab_protocol_3:checked ~ #content_protocol_3,
+#tab_protocol_4:checked ~ #content_protocol_4
+{
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+
+section.tab pre {
+  background: #f6f6f6;
+  padding: 6px 12px;
+  margin: 0;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  color: #010b35;
+}
+section.tab pre code {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: none;
+  color: #010b35;
+}
+section.tab table{width:100%;}
+section.tab table pre{
+    background: none;
+    padding: 6px 12px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+/* Notebook overrides */
+.rendered_html table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc; 
+    border-collapse: collapse;
+}
+
+.rendered_html td, .rendered_html th {
+    vertical-align: top;
+    padding: 10px;
+}
+.rendered_html tr, .rendered_html th, .rendered_html td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 1em 2em;
+}
+
+.rendered_html blockquote, .rendered_html pre {
+    margin: 2em 0;
+}
+
+.rendered_html code, .rendered_html pre {
+    color: #010b35;
+}
+
+.rendered_html h1, 
+.rendered_html h2,
+.rendered_html h3,
+.rendered_html h4{
+  color:#010b35;
+}
+div.output_area img, 
+div.output_area svg,
+div.output_subarea {
+    max-width: 100%;
+}
+
+#toc .rendered_html * + ol {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
